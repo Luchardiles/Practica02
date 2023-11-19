@@ -1,0 +1,103 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="portfolio.component.css">
+    <title>Perfil personal</title>
+</head>
+<body class=" bg-green-500 ">
+    <div class="container mx-auto mt-4 bg-green-500 min-h-screen">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+                <img src="assets\luis ardiles.jpg" alt="Luis Felipe Ardiles Castillo" class="w-20 mx-auto ml-200 mr-0">
+            </div>
+            <div class="text-center col-span-1">
+                <h1 *ngFor="let item of data" class="text-3xl font-semibold border border-blue-500 rounded-full p-1 inline-block bg-blue-500 text-white "><span>{{item.name}} {{item.lastname}}</span></h1>
+            </div>
+            <div class="text-center">
+                <img src="assets\luis ardiles.jpg" alt="Luis Felipe Ardiles Castillo" class="w-20 mx-auto ml-0 mr-0">
+            </div>
+        </div>
+        <div *ngFor="let item of data" class="grid grid-cols-1 mt-3 ml-32 mr-32">
+            <div class="text-center">
+                {{item.summary}}{{item.summary2}}
+            </div>
+        </div>
+        <div class="grid grid-cols-1 mt-3 ml-32 mr-32">
+            <div class="space-y-2">
+                <div class="border p-2 rounded-lg bg-white bg">
+                    <div>
+                        <button class="w-full text-left font-semibold text-gray-800 focus:outline-none bg-blue-500 bg-opacity-25 text-white py-2 px-4 overflow-x-visible overflow-y-visible">Datos personales</button>
+                    </div>
+                    <div *ngFor="let item of data" class="p-2 ">
+                        <div class="grid grid-cols-2 ">
+                            <div class="text-left text-gray-800">Edad</div>
+                            <div class="text-left text-gray-800">{{item.age}} años</div>
+                            <div class="text-left text-gray-800">Ciudad</div>
+                            <div class="text-left text-gray-800">{{item.city}}</div>
+                            <div class="text-left text-gray-800">Correo electrónico</div>
+                            <div class="text-left text-gray-800">{{item.email}}</div>
+                        </div>
+                        <div class="grid grid-cols-2 mt-3">
+                            <div class="text-left text-gray-800">Redes sociales</div>
+                            <div class="text-left">
+                                <a href="{{item.facebook}}" target="_blank" class="text-white bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Instagram</a>
+                                <a href="{{item.instagram}}" target="_blank" class="text-white bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="grid grid-cols-1 mt-3 text-center text-4xl">
+            <div class="text-center">
+                Intereses personales
+            </div>
+        </div>
+        <div *ngFor="let item of data" class="grid grid-cols-2 mt-3  ml-32 mr-32">
+            <div class="text-center border border-white">
+                {{hobbies[0].name}} 
+            </div>
+            <div class="text-center border border-white">
+                {{hobbies[1].name}}
+            </div>
+            <div class="text-center border border-white">
+                {{hobbies[2].name}}
+            </div>
+            <div class="text-center border border-white">
+                {{hobbies[3].name}}
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg mt-3  ml-32 mr-32">
+            <div class="grid grid-cols-2 gap-2">
+                <div class="text-left font-extrabold mb-2 text-gray-800">Herramientas tecnologicas</div>
+                <div class="text-left font-extrabold mb-2 text-gray-800">Nivel de conocimiento</div>
+            </div>
+            <div *ngFor="let item of data" class="grid grid-cols-2 gap-2">
+                <div class="text-left font-extrabold text-gray-800">{{frameworks[0].name}}</div>
+                <div class="text-right">
+                    <div class="w-full h-6 bg-blue-200 rounded-full">
+                        <div class="h-full bg-blue-500 rounded-full " style="width: 70%; "></div>
+                    </div>
+                </div>
+                <div class="text-left font-extrabold text-gray-800">{{frameworks[1].name}}</div>
+                <div class="text-right">
+                    <div class="w-full h-6 bg-blue-200 rounded-full">
+                        <div class="h-full bg-blue-500 rounded-full" style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div class="text-left font-extrabold text-gray-800">{{frameworks[2].name}}</div>
+                <div class="text-right">
+                    <div class="w-full h-6 bg-blue-200 rounded-full">
+                        <div class="h-full bg-blue-500 rounded-full" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="text-left font-extrabold text-gray-800">{{frameworks[3].name}}</div>
+                <div class="text-right">
+                    <div class="w-full h-6 bg-blue-200 rounded-full">
+                        <div class="h-full bg-blue-500 rounded-full" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+</body>
