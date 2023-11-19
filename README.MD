@@ -6,11 +6,11 @@ Este repositorio contiene el código para el backend en Laravel y el frontend en
 ## Requisitos Previos
  Para que funcione el codigo se debe tener instalado:
 
- - Tener Composer.
- - Instala PHP.
- - Instala Node.js.
- - Instala Angular CLI.
- - Instala XAMPP.
+ - Composer.
+ - PHP.
+ - Node.js.
+ - Angular CLI.
+ - XAMPP.
 
 
 ## Configuración de la Backend 
